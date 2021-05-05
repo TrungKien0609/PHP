@@ -44,6 +44,7 @@ body {
                     }
                 }
             }
+            
             .logout {
                 background: #333;
                 color: #fff;
@@ -69,16 +70,31 @@ body {
                 font-size: 16px;
                 border-radius: 5px;
                 outline: none;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.2s ease;
+            }
+            input.active{
+                opacity: 1;
+                pointer-events: auto;
             }
             button {
                 width: 47px;
                 height: 42px;
                 border: none;
                 outline: none;
-                color: #fff;
-                background: #333;
+                color: #333;
+                background: #fff;
                 border-radius: 0 5px 5px 0;
                 font-size: 17px;
+                transition: all 0.2s ease;
+            }
+            button.active{
+                color: #fff;
+                background: #333;
+                i::before{
+                    content: "\f00d";
+                }
             }
         }
         .user_list {
@@ -120,6 +136,9 @@ body {
                     right: 5px;
                     font-size: 12px;
                     color: #468669;
+                }
+                .status_dot.offline{
+                    color: #ccc;
                 }
                 // using this class name in php to show offline status
                 .status_dot.offline{

@@ -37,6 +37,7 @@ body {
                 border-radius: 5px;
                 margin-bottom: 10px;
                 border: 1px solid #f5c6cb;
+                display: none;
             }
             .name_details {
                 display: flex;
@@ -51,11 +52,24 @@ body {
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 10px;
+                position: relative;
                 input {
                     outline: none;
                 }
                 label{
                     margin-bottom: 2px;
+                }
+                i{
+                    position: absolute;
+                    right: 15px;
+                    color: #ccc;
+                    top:70%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                }
+                i.active::before{
+                    color: #333;
+                    content: "\f070";
                 }
             }
             .input {
